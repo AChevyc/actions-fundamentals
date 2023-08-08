@@ -3,7 +3,8 @@ on: [pull_request]
 
 jobs:
   demo:
-     runs-on: ubuntu-latest
-       steps:
-         -run: echo "Hello wrod"
-     
+    name: DemoWorkflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Demo Excho
+        run: echo "Hello world"
