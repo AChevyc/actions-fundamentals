@@ -1,0 +1,7 @@
+name: GitHub Actions Demo
+on: [pull_request]
+
+jobs:
+  demo:
+     runs-on: ubuntu-latest
+     
