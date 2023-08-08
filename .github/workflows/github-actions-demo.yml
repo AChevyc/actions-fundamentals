@@ -1,11 +1,12 @@
 name: GitHub Actions Demo
 
-on: [workflow_dispatch]
-
-jobs:
-  demo:
-    name: DemoWorkflow
-    runs-on: ubuntu-latest
-    steps:
-      - name: Demo Excho
-        run: echo "Hello world"
+on:
+  push:
+    branches: [main]
+    paths-ignore: [.github/**]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '15 6 * * 0'
+  workflow_dispatch:
+    
